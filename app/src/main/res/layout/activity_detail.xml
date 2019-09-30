@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
+    <TextView
+        android:id="@+id/judul_buku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="40dp"
+        android:text="Judul :"
+        android:textColor="#231f20"
+        android:textSize="40dp" />
+
 </android.support.constraint.ConstraintLayout>
