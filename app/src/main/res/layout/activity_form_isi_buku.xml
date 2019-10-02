@@ -1,65 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin"
-    tools:context=".FormIsiBukuActivity">
-
-    <EditText
-        android:id="@+id/judul_buku"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="judul buku" />
+    tools:context=".activity.admin.FormIsiBukuActivity">
 
     <EditText
         android:id="@+id/no_panggil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="no panggil" />
+        android:hint="no panggil"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/pengarang_buku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="pengarang" />
+        android:hint="pengarang"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/penerbit_buku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="penerbit" />
+        android:hint="penerbit"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/deskripsi_buku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="deskripsi" />
+        android:hint="deskripsi"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/subjek_buku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="subjek" />
+        android:hint="subjek"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/konten_digital_buku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="konten digital" />
+        android:hint="konten digital"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/eksemplar_buku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="eksemplar" />
+        android:hint="eksemplar"
+        android:inputType="text" />
+
+    <EditText
+
+        android:id="@+id/judul_buku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="judul buku"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/simpan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="simpan" />
-
 </LinearLayout>

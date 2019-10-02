@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/layout_lima"
     android:padding="@dimen/fab_margin"
-    tools:context=".ContactActivity">
+    tools:context=".activity.user.ContactActivity">
 
     <TextView
         android:layout_width="wrap_content"

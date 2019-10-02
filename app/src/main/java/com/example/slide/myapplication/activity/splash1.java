@@ -1,9 +1,11 @@
-package com.example.slide.myapplication;
+package com.example.slide.myapplication.activity;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.slide.myapplication.R;
 
 public class splash1 extends AppCompatActivity {
     private int waktu_loading = 4000;
@@ -13,16 +15,12 @@ public class splash1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash1);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        new Handler().postDelayed(() -> {
 
-                //setelah loading maka akan langsung berpindah ke home activity
-                Intent home=new Intent(splash1.this, MainActivity.class);
-                startActivity(home);
-                finish();
+            Intent home=new Intent(splash1.this, MainActivity.class);
+            startActivity(home);
+            finish();
 
-            }
         },waktu_loading);
     }
 }

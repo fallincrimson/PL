@@ -1,4 +1,4 @@
-package com.example.slide.myapplication;
+package com.example.slide.myapplication.activity.admin;
 
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.slide.myapplication.R;
 import com.example.slide.myapplication.model.DataBuku;
 import com.example.slide.myapplication.model.DataTemp;
 import com.google.firebase.database.DatabaseReference;
