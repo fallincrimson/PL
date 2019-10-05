@@ -107,7 +107,7 @@ public class FormIsiBukuActivity extends AppCompatActivity implements View.OnCli
                     eksemplar
             ));
         } else {
-            Snackbar.make(findViewById(R.id.simpan), "Data berhasil disimpan", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(findViewById(R.id.simpan), "Data Kosong", Snackbar.LENGTH_SHORT).show();
         }
     }
 

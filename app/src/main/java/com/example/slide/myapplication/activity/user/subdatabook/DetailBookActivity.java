@@ -1,4 +1,4 @@
-package com.example.slide.myapplication.activity.user;
+package com.example.slide.myapplication.activity.user.subdatabook;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

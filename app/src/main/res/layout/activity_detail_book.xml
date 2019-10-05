@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/layout_lima"
-    tools:context=".activity.user.DetailBookActivity">
+    tools:context=".activity.user.subdatabook.DetailBookActivity">
 
     <TextView
         android:id="@+id/nama_buku"
