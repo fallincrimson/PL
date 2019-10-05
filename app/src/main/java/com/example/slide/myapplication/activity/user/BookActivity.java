@@ -2,6 +2,7 @@ package com.example.slide.myapplication.activity.user;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.slide.myapplication.R;
 import com.example.slide.myapplication.adapter.BookAdapter;
@@ -66,12 +68,18 @@ public class BookActivity extends AppCompatActivity {
                             dataBukus = new ArrayList<>();
                             for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                                 DataBuku dataBuku = dataSnapshot1.getValue(DataBuku.class);
-                                dataBuku.setNoPanggil(dataSnapshot1.getKey());
                                 dataBukus.add(dataBuku);
                             }
                             bookAdapter = new BookAdapter();
                             recyclerView.setAdapter(bookAdapter);
                             bookAdapter.setMovieList(getApplicationContext(), dataBukus);
+                            bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
+                                @Override
+                                public void onItemClicked(DataBuku data) {
+                                    Toast.makeText(BookActivity.this, data.getNamaBuku(), Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
                         }
 
                         @Override

@@ -32,12 +32,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginBottom="40dp"
                 android:text="INTRODUCTION"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="#231f20"
-                android:textSize="40dp" />
+                android:textSize="@dimen/size_title" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -54,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="applikasi ini dibuat untuk mencari koleksi buku yang ada di perpustakaan daerah kota bogor berdasarkan no. panggil, judul buku dan pengarangnya"
+                android:text="aplikasi ini dibuat untuk mencari koleksi buku yang ada di perpustakaan daerah kota bogor berdasarkan no. panggil, judul buku dan pengarangnya"
                 android:textAlignment="center"
                 android:textColor="#231f20"
                 android:textSize="20sp" />

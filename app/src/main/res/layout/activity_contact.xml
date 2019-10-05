@@ -32,12 +32,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:layout_marginBottom="40dp"
+                android:layout_margin="50dp"
                 android:text="CONTACT US"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="#231f20"
-                android:textSize="40dp" />
+                android:textSize="@dimen/size_title" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="081234458092"
+                android:layout_margin="20dp"
                 android:textAlignment="center"
                 android:textColor="#231f20"
                 android:textSize="20sp" />
@@ -57,7 +58,6 @@
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
-                android:layout_margin="60dp"
                 android:src="@drawable/contact_satu" />
 
 

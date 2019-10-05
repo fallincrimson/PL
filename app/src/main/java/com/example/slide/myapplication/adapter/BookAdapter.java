@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.slide.myapplication.R;
@@ -25,6 +24,11 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
     private List<DataBuku> bookList;
     private List<DataBuku> bookListFiltered;
     private Context context;
+    private OnItemClickCallback onItemClickCallback;
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
 
     public void setMovieList(Context ctx, List<DataBuku> bookList) {
         this.context = ctx;
@@ -71,7 +75,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        myViewHolder.title.setText(bookListFiltered.get(i).getNamaBuku());
+        DataBuku listData = bookListFiltered.get(i);
+        myViewHolder.title.setText(listData.getNamaBuku());
+        myViewHolder.pengarang.setText(listData.getPengarang());
+        myViewHolder.noPanggil.setText(listData.getNoPanggil());
+
+        myViewHolder.itemView.setOnClickListener(v ->
+                onItemClickCallback.onItemClicked(listData));
     }
 
     @Override
@@ -84,11 +94,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView title;
+        TextView title, pengarang, noPanggil;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.TxtNamaBuku);
+            title = itemView.findViewById(R.id.txt_nama_buku);
+            pengarang = itemView.findViewById(R.id.txt_nama_pengarang);
+            noPanggil = itemView.findViewById(R.id.txt_no_panggil);
         }
     }
 
@@ -121,5 +133,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
                 notifyDataSetChanged();
             }
         };
+    }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(DataBuku data);
     }
 }
