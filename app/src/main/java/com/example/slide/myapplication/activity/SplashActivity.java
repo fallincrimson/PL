@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
 
-            Intent home=new Intent(SplashActivity.this, FormIsiBukuActivity.class);
+            Intent home=new Intent(SplashActivity.this, MainActivity.class);
             startActivity(home);
             finish();
 

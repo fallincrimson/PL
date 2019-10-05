@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/fullScreen"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.user.DetailBookActivity"></activity>
+        <activity android:name=".activity.admin.LoginActivity"></activity>
+        <activity android:name=".activity.user.DetailBookActivity" />
         <activity
             android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
@@ -25,9 +26,6 @@
         </activity>
         <activity
             android:name=".activity.user.InformationActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.admin.AdminActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.admin.FormIsiBukuActivity"

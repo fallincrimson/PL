@@ -73,12 +73,18 @@ public class BookActivity extends AppCompatActivity {
                             bookAdapter = new BookAdapter();
                             recyclerView.setAdapter(bookAdapter);
                             bookAdapter.setMovieList(getApplicationContext(), dataBukus);
-                            bookAdapter.setOnItemClickCallback(new BookAdapter.OnItemClickCallback() {
-                                @Override
-                                public void onItemClicked(DataBuku data) {
-                                    Toast.makeText(BookActivity.this, data.getNamaBuku(), Toast.LENGTH_SHORT).show();
-
-                                }
+                            bookAdapter.setOnItemClickCallback(data -> {
+                                Toast.makeText(BookActivity.this, data.getNamaBuku(), Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(BookActivity.this, DetailBookActivity.class);
+                                intent.putExtra("namaBuku", data.getNamaBuku());
+                                intent.putExtra("noPanggil", data.getNoPanggil());
+                                intent.putExtra("pengarang", data.getPengarang());
+                                intent.putExtra("penerbit", data.getPenerbit());
+                                intent.putExtra("deskripsi", data.getDeskripsi());
+                                intent.putExtra("subjek", data.getSubjek());
+                                intent.putExtra("kontendigital", data.getKontenDigital());
+                                intent.putExtra("eksemplar", data.getEksemplar());
+                                startActivity(intent);
                             });
                         }
 

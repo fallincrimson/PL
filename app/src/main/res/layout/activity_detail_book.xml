@@ -8,12 +8,15 @@
     tools:context=".activity.user.DetailBookActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/nama_buku"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
         android:text="JUDUL"
-        android:textSize="@dimen/size_title"
+        android:textAlignment="center"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,17 +26,18 @@
         android:id="@+id/text_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/nama_buku"
         tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Panggil :" />
+            android:text="No Panggil : "
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/no_panggil"
@@ -46,7 +50,7 @@
         android:id="@+id/text_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
@@ -56,7 +60,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pengarang :" />
+            android:text="Pengarang : "
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nama_pengarang"
@@ -69,7 +74,7 @@
         android:id="@+id/text_tree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
@@ -79,7 +84,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Penerbit :" />
+            android:text="Penerbit : "
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nama_penerbit"
@@ -92,7 +98,7 @@
         android:id="@+id/text_four"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
@@ -102,7 +108,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deskripsi :" />
+            android:text="Deskripsi : "
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nama_deskripsi"
@@ -115,7 +122,7 @@
         android:id="@+id/text_five"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
@@ -125,7 +132,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subjek :" />
+            android:text="Subjek : "
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/nama_subjek"
@@ -134,4 +142,51 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/text_six"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/text_five"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konten Digital : "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nama_digital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_seven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/text_six"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eksemplar : "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nama_eksemplar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

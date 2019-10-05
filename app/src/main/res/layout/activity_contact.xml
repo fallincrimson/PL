@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/layout_lima"
-    android:padding="@dimen/fab_margin"
     tools:context=".activity.user.ContactActivity">
 
     <TextView
@@ -34,10 +33,10 @@
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:text="CONTACT US"
-                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="#231f20"
-                android:textSize="@dimen/size_title" />
+                android:textSize="@dimen/size_title"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,8 +47,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="081234458092"
                 android:layout_margin="20dp"
+                android:text="081234458092"
                 android:textAlignment="center"
                 android:textColor="#231f20"
                 android:textSize="20sp" />
@@ -57,10 +56,17 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:src="@drawable/contact_satu" />
 
-
+            <Button
+                android:id="@+id/btn_admin"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_dua"
+                android:text="Anda Admin?" />
         </LinearLayout>
 
     </LinearLayout>

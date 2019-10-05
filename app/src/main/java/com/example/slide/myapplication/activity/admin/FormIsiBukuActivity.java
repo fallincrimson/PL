@@ -113,7 +113,7 @@ public class FormIsiBukuActivity extends AppCompatActivity implements View.OnCli
 
     private void submitMenu(DataBuku dataBuku) {
         database.child(pathBuku)
-                .child(noPanggil)
+                .push()
                 .setValue(dataBuku)
                 .addOnSuccessListener(this, data -> {
                     inJudulBuku.setText("");
