@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Public Catalog</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_search">search</string>
 </resources>

@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/fullScreen"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.user.subinformation.WisataActivity"></activity>
+        <activity android:name=".activity.admin.MenuAdminActivity"></activity>
+        <activity android:name=".activity.user.subinformation.WisataActivity" />
         <activity android:name=".activity.user.subinformation.PusLingActivity" />
         <activity android:name=".activity.user.subinformation.PinjamActivity" />
         <activity android:name=".activity.user.subinformation.AnggotaActivity" />

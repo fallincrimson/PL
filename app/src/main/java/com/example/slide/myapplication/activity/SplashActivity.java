@@ -2,11 +2,10 @@ package com.example.slide.myapplication.activity;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.slide.myapplication.R;
-import com.example.slide.myapplication.activity.admin.FormIsiBukuActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private int waktu_loading2 = 4000;
