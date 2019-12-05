@@ -6,6 +6,15 @@ import android.widget.TextView;
 
 import com.example.slide.myapplication.R;
 
+import static com.example.slide.myapplication.model.DataTemp.DESKRIPSI;
+import static com.example.slide.myapplication.model.DataTemp.EKSEMPLAR;
+import static com.example.slide.myapplication.model.DataTemp.KONTEN_DIGITAL;
+import static com.example.slide.myapplication.model.DataTemp.NAMA_BUKU;
+import static com.example.slide.myapplication.model.DataTemp.NO_PANGGIL;
+import static com.example.slide.myapplication.model.DataTemp.PENERBIT;
+import static com.example.slide.myapplication.model.DataTemp.PENGARANG;
+import static com.example.slide.myapplication.model.DataTemp.SUBJEK;
+
 public class DetailBookActivity extends AppCompatActivity {
     TextView namaBuku, noPanggil, pengarang, penerbit, deskripsi, subjek, kontenDigital, eksemplar;
 
@@ -23,13 +32,13 @@ public class DetailBookActivity extends AppCompatActivity {
         kontenDigital = findViewById(R.id.nama_digital);
         eksemplar = findViewById(R.id.nama_eksemplar);
 
-        namaBuku.setText(getIntent().getStringExtra("namaBuku"));
-        noPanggil.setText(getIntent().getStringExtra("noPanggil"));
-        pengarang.setText(getIntent().getStringExtra("pengarang"));
-        penerbit.setText(getIntent().getStringExtra("penerbit"));
-        deskripsi.setText(getIntent().getStringExtra("deskripsi"));
-        subjek.setText(getIntent().getStringExtra("subjek"));
-        kontenDigital.setText(getIntent().getStringExtra("kontendigital"));
-        eksemplar.setText(getIntent().getStringExtra("eksemplar"));
+        namaBuku.setText(getIntent().getStringExtra(NAMA_BUKU));
+        noPanggil.setText(getIntent().getStringExtra(NO_PANGGIL));
+        pengarang.setText(getIntent().getStringExtra(PENGARANG));
+        penerbit.setText(getIntent().getStringExtra(PENERBIT));
+        deskripsi.setText(getIntent().getStringExtra(DESKRIPSI));
+        subjek.setText(getIntent().getStringExtra(SUBJEK));
+        kontenDigital.setText(getIntent().getStringExtra(KONTEN_DIGITAL));
+        eksemplar.setText(getIntent().getStringExtra(EKSEMPLAR));
     }
 }

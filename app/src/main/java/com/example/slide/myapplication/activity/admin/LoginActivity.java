@@ -44,12 +44,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             inPass.setError("Password Kosong");
         }
 
-        if (!isEmptyField) {
-            if (inputUser.equals(user) && inputPass.equals(pass)) {
+//        if (!isEmptyField) {
+//            if (inputUser.equals(user) && inputPass.equals(pass)) {
                 Toast.makeText(this, "Mode Admin", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(LoginActivity.this, FormIsiBukuActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MenuAdminActivity.class);
                 startActivity(intent);
-            }
-        }
+//            }
+//        }
     }
 }

@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".activity.admin.MenuAdminActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Menu Admin"
+        app:titleTextColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/btn_add_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_button_dua"
+        android:text="Tambah Buku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarTitle" />
+
+    <Button
+        android:id="@+id/btn_book_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_button_dua"
+        android:text="List Buku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_book" />
 </androidx.constraintlayout.widget.ConstraintLayout>

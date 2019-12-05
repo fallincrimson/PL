@@ -2,7 +2,7 @@ package com.example.slide.myapplication.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DataBuku {
+public class BookData {
     @SerializedName("nama_buku")
     private String namaBuku;
     @SerializedName("no_panggil")
@@ -19,13 +19,15 @@ public class DataBuku {
     private String kontenDigital;
     @SerializedName("eksemplar_buku")
     private String eksemplar;
+    @SerializedName("key")
+    private String key;
 
 
-    public DataBuku() {
+    public BookData() {
 
     }
 
-    public DataBuku(String namaBuku, String noPanggil, String pengarang, String penerbit, String deskripsi, String subjek, String kontenDigital, String eksemplar) {
+    public BookData(String namaBuku, String noPanggil, String pengarang, String penerbit, String deskripsi, String subjek, String kontenDigital, String eksemplar, String key) {
         this.namaBuku = namaBuku;
         this.noPanggil = noPanggil;
         this.pengarang = pengarang;
@@ -34,6 +36,15 @@ public class DataBuku {
         this.subjek = subjek;
         this.kontenDigital = kontenDigital;
         this.eksemplar = eksemplar;
+        this.key = key;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getNoPanggil() {

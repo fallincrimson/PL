@@ -13,6 +13,14 @@ import com.example.slide.myapplication.model.DataBuku;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import static com.example.slide.myapplication.model.DataTemp.DESKRIPSI;
+import static com.example.slide.myapplication.model.DataTemp.EKSEMPLAR;
+import static com.example.slide.myapplication.model.DataTemp.KONTEN_DIGITAL;
+import static com.example.slide.myapplication.model.DataTemp.NAMA_BUKU;
+import static com.example.slide.myapplication.model.DataTemp.NO_PANGGIL;
+import static com.example.slide.myapplication.model.DataTemp.PENERBIT;
+import static com.example.slide.myapplication.model.DataTemp.PENGARANG;
+import static com.example.slide.myapplication.model.DataTemp.SUBJEK;
 import static com.example.slide.myapplication.model.DataTemp.deskripsi;
 import static com.example.slide.myapplication.model.DataTemp.eksemplar;
 import static com.example.slide.myapplication.model.DataTemp.kontenDigital;
@@ -24,6 +32,9 @@ import static com.example.slide.myapplication.model.DataTemp.pengarang;
 import static com.example.slide.myapplication.model.DataTemp.subjek;
 
 public class FormIsiBukuActivity extends AppCompatActivity implements View.OnClickListener {
+    public static final String MODE_EDIT = "extra_edit";
+    private String status;
+
     private DatabaseReference database;
 
     EditText inJudulBuku, inNoPanggil, inPengarang, inPenerbit, inDeskripsi, inSubjek, inKontenDigital, inEksemplar;
@@ -45,6 +56,19 @@ public class FormIsiBukuActivity extends AppCompatActivity implements View.OnCli
         btnSimpan = findViewById(R.id.simpan);
 
         database = FirebaseDatabase.getInstance().getReference();
+        status = getIntent().getStringExtra(MODE_EDIT);
+
+        if (status != null && status.equalsIgnoreCase("edit")){
+            inJudulBuku.setText(getIntent().getStringExtra(NAMA_BUKU));
+            inNoPanggil.setText(getIntent().getStringExtra(NO_PANGGIL));
+            inPengarang.setText(getIntent().getStringExtra(PENGARANG));
+            inPenerbit.setText(getIntent().getStringExtra(PENERBIT));
+            inDeskripsi.setText(getIntent().getStringExtra(DESKRIPSI));
+            inSubjek.setText(getIntent().getStringExtra(SUBJEK));
+            inKontenDigital.setText(getIntent().getStringExtra(KONTEN_DIGITAL));
+            inEksemplar.setText(getIntent().getStringExtra(EKSEMPLAR));
+        }
+
         btnSimpan.setOnClickListener(this);
     }
 
